@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Lal Pari</h1>
+        <span style="display: none;">World</span>
+    </div>
+</body>
+<script>
+    let div = document.querySelector('.main');
+    console.log(div.children[0]);
+    div.children[0].style.color = "red"
+
+
+
+    let newDiv = document.createElement('div')
+    let newHeading = document.createElement('h1')
+
+    console.log(newDiv);
+    
+    newDiv.className="main-2"
+    newHeading.style.color="blue"
+    
+    newDiv.appendChild(newHeading)
+    newHeading.appendChild(document.createTextNode("Neel Pari"))
+    document.body.appendChild(newDiv)
+    
+    
+    
+    
+    
+    
+    
+    
+</script>
+</html>

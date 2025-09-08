@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+ <script>
+    let ul = document.createElement('ul')
+    let li = document.createElement('li')
+     ul.className = "list"
+
+    console.log(ul);
+    ul.appendChild(li)
+    li.appendChild(document.createTextNode('sompapri'))
+
+    document.body.appendChild(ul)
+
+    function newList(listName){
+        let ul = document.querySelector('.list')
+        let li = document.createElement('li')
+        ul.appendChild(li)
+        li.appendChild(document.createTextNode(listName))
+        
+    }
+    newList("subham")
+    newList("Srija")
+    newList("Sanjina")
+
+    let nthChild= document.querySelector('li:nth-child(2)')
+    nthChild.remove()
+
+    let firstChild = document.querySelector('li:first-child')
+    firstChild.replaceChildren("Soumili")
+
+    </script>
+</html>
+

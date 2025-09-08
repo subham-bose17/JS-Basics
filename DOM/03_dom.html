@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212121; color: rgb(234, 234, 234);">
+    <ul class="list">
+        <li>sampriti</li>
+    </ul>
+
+    <button type="button" class="btn" id="#3a86ff">Click to Change background-color</button>
+
+</body>
+<script>
+
+    function newList(listName) {
+        let ul = document.querySelector('.list')
+        let li = document.createElement('li')
+        let newtext = document.createTextNode(listName)
+        li.appendChild(newtext)
+        ul.appendChild(li)
+
+    }
+
+    newList('green')
+    newList("blue")
+    newList('red')
+    newList('lavender')
+
+    let removeText = document.querySelector('li:nth-child(4)')
+
+    removeText.remove()
+
+    let replaceText = document.querySelector('li:first-child')
+
+    replaceText.replaceChildren('Gray')
+
+
+    // let listColor = (color)=>{
+
+    //     let ul = document.querySelectorAll('.list')
+    //     console.log(ul)
+    //     Array.from(ul).map((l)=>{
+    //         console.log(l);
+    //         l.style.color=color
+
+    //     })
+    // } 
+
+    // listColor("red")
+
+
+    let listColor = (color) => {
+
+        let ul = document.querySelectorAll('.list')
+        console.log(ul)
+        ul.forEach((l) => {
+            l.style.color = color
+        })
+    }
+
+    listColor("#a8dadc")
+
+
+
+    
+
+    let btn = document.querySelector('.btn')
+    let body = document.querySelector('body')
+    // console.log(btn);
+    btn.addEventListener('click',(e)=>{
+        // console.log(e.target);
+        if (e.target.id==='#3a86ff') {
+            body.style.backgroundColor = e.target.id
+        }
+        
+    })
+    
+
+
+
+
+
+
+
+</script>
+
+</html>
